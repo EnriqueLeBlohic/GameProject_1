@@ -1,0 +1,61 @@
+//CUSTON setOnGround player
+function setOnGround(_val = true)
+{
+	if _val == true
+	{
+	  onGround = true;
+	  coyoteHangTimer = coyoteHangFrames;
+	} else {
+		onGround = false;
+		coyoteHangTimer = 0;
+	}
+
+}
+
+
+
+//Control Setup
+controlsSetup();
+
+//SPRITES
+maskSpr = sPlayerIdle;
+idleSpr = sPlayerIdle;
+walkSpr = sPlayerWalk;
+jumpSpr = sPlayerJump;
+runSpr = sPlayerRun;
+
+
+//moving
+face = 1;
+moveDir = 0;
+moveSpd = 4.5;
+yspd = 0;
+yspd = 0;
+
+baseMoveSpd = 4.5;    // Initial initial base velocity 
+maxMoveSpd = 7.5;     // Maximum running velocity 
+speedTimer = 0;       // Temporize velocity 
+
+//jump
+grav = .275;
+termVel = 4;
+jspd = -6.15;
+jumpMax = 2;
+jumpCount = 0;
+jumpHoldTimer = 0;
+jumpHoldFrames = 18;
+onGround = true;
+
+//COYOTE TIME
+coyoteHangFrames = 3;
+coyoteHangTimer = 0;
+//Jump Buffer Time
+coyoteJumpFrames = 5;
+coyoteJumptTimer = 0;
+
+
+
+
+
+
+
